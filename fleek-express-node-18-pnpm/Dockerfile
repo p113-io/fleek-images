@@ -1,7 +1,8 @@
 # ==== CONFIGURE =====
 FROM debian:sid
-RUN apk update && apk add --no-cache curl tree 
-RUN curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
-RUN apk install nodejs
+RUN apt update && apt upgrade -y && apt auto-remove -y
+RUN apt install curl tree -y
+RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
+RUN apt install nodejs -y
 RUN npm i -g serve
 RUN npm i -g pnpm
