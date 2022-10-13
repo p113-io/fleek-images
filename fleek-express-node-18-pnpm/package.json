@@ -1,0 +1,5 @@
+{
+	"dependencies": {
+		"@pnpm/make-dedicated-lockfile": "^0.3.21"
+	}
+}
